@@ -1,5 +1,9 @@
-attemptRedirect()
-setInterval(attemptRedirect(), 1500);
+setTimeout(
+  () => {
+    attemptRedirect()
+    setInterval(() => {attemptRedirect()}, 1500);
+  }, 500
+)
 
 function attemptRedirect() {
   const path = window.location.pathname;
